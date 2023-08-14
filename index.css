@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Sen', sans-serif;
+}
+
+header {
+    background: #55d6aa;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li a {
+    padding: 20px;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+}
+
+nav a:hover {
+    color: #000;
+    background-color: forestgreen;
+}
+
+.welcome {
+    color: beige;
+}
+
+:root {
+    overflow: hidden; /* hides any part of the sun below the horizon */
+    background-color: lightblue;
+    display: flex;
+    justify-content: center; /* centers the sun in the background */
+  }
+  
+  .sun {
+    background-color: yellow;
+    border-radius: 50%; /* creates a circular background */
+    height: 100vh; /* makes the sun the size of the viewport */
+    aspect-ratio: 1 / 1;
+    animation: 4s linear 0s sun-rise;
+  }
+  
+  @keyframes sun-rise {
+    from {
+      /* pushes the sun down past the viewport */
+      transform: translateY(110vh);
+    }
+    to {
+      /* returns the sun to its default position */
+      /*transform: translateY(0);*/
+    }
+  }
